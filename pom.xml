@@ -8,8 +8,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.5</version> <!-- pode ajustar para a versão mais recente -->
-        <relativePath/> <!-- busca no repositório central -->
+        <version>3.2.5</version>
+        <relativePath/>
     </parent>
 
     <groupId>org.example</groupId>
@@ -21,11 +21,34 @@
     </properties>
 
     <dependencies>
-        <!-- Dependência principal do Spring Boot (Web / REST API) -->
+        <!-- Web / REST API -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!-- Devtools para hot reload -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- Spring Data JPA -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- Banco de dados -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+            <scope>runtime</scope>
+        </dependency>
+
 
         <!-- Testes -->
         <dependency>
