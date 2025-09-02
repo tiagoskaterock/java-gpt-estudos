@@ -17,9 +17,7 @@ public class JavaGptEstudosApplication {
     @Bean
     public CommandLineRunner init(UserRepository repository) {
         return args -> {
-            repository.save(new User("Tiago", "tiago@email.com"));
-            repository.save(new User("João", "joao@email.com"));
-            repository.save(new User("Maria", "maria@email.com"));
+            repository.save(new User("Admin", "admin@admin.com"));
         };
     }
 }

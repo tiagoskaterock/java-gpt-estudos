@@ -9,7 +9,7 @@ import java.util.List;
 @RestController
 public class UserController {
 
-    @GetMapping("/users")
+    @GetMapping("/api/users")
     public List<User> getUsers() {
         return List.of(
                 new User("Tiago", "tiago@email.com"),
