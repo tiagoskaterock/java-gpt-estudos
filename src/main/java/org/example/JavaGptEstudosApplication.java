@@ -17,9 +17,10 @@ public class JavaGptEstudosApplication {
 
     @Bean
     public CommandLineRunner init(UserRepository repository, UserFactory factory) {
+    	
         return args -> {
             // salva um usuário fixo
-            repository.save(factory.make("Tiago Lemes", "tiagolemespalhano@gmail.com", "12345678"));
+            repository.save(factory.make("Tiago Lemes Palhano Bordin", "tiagolemespalhano@gmail.com", "12345678"));
 
             // salva 25 usuários aleatórios
             repository.saveAll(factory.many(25));
