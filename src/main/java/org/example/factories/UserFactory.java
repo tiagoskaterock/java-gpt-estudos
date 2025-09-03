@@ -25,7 +25,7 @@ public class UserFactory {
                 encoder.encode(password)
         );
     }
-    
+
     public User make() {
         return new User(
                 faker.name().fullName(),
