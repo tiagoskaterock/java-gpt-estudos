@@ -29,6 +29,12 @@
             <version>1.0.2</version>
         </dependency>
 
+        <!-- Hash-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
         <!-- Web / REST -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

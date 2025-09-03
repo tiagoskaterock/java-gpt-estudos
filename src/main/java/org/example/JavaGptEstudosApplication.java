@@ -1,7 +1,6 @@
 package org.example;
 
 import org.example.factories.UserFactory;
-import org.example.factories.UserFactory;
 import org.example.models.User;
 import org.example.repositories.UserRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -17,10 +16,13 @@ public class JavaGptEstudosApplication {
     }
 
     @Bean
-    public CommandLineRunner init(UserRepository repository) {
+    public CommandLineRunner init(UserRepository repository, UserFactory factory) {
         return args -> {
-            repository.save(new User("Tiago Lemes", "tiagolemespalhano@gmail.com", "12345678"));
-            repository.saveAll(UserFactory.many(25));
+            // salva um usuário fixo
+            repository.save(factory.make("Tiago Lemes", "tiagolemespalhano@gmail.com", "12345678"));
+
+            // salva 25 usuários aleatórios
+            repository.saveAll(factory.many(25));
         };
     }
 }
